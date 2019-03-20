@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "WXBaseKit"                #名称
-  s.version      = "0.0.1"                  #版本号
+  s.version      = "0.0.2"                  #版本号
   s.summary      = "ios基础开发库"               #简短介绍
   s.description  = <<-DESC 
                       ios开发库,基础类,通用组建,数据模型,分类
@@ -16,6 +16,7 @@ Pod::Spec.new do |s|
       'WXBaseKit' => ['WXBaseKit/Assets/*']
   }
   s.dependency 'YYKit'
+  s.source_files = 'WXBaseKit/Classes/**/*'
   s.subspec 'Base' do |base|
       base.source_files = 'WXBaseKit/Classes/Base/**/*'
   end
