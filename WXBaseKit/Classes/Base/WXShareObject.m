@@ -23,9 +23,14 @@
 {
     self = [super init];
     if (self) {
-        self.appId = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"];
-        self.appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
-        self.appHost = @"http://183.63.99.82:8399";
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"config" ofType:@"plist"];
+        NSDictionary *d = [NSDictionary dictionaryWithContentsOfFile:path];
+        if (d) {
+            self.appId = d[@"appId"] ? d[@"appId"] : @"";
+            self.appName = d[@"appName"] ? d[@"appName"] : @"";
+            self.appHost = d[@"appHost"] ? d[@"appHost"] : @"";
+            self.encryption = d[@"encryption"] ? d[@"encryption"] : @"";
+        }
     }
     return self;
 }

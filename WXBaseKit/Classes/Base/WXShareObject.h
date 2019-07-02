@@ -13,6 +13,7 @@
 @property (strong, nonatomic) NSString *appId;
 @property (strong, nonatomic) NSString *appName;
 @property (strong, nonatomic) NSString *appHost;
+@property (assign, nonatomic) BOOL encryption;// 接口调用是否开启加密，默认开启
 
 + (instancetype)shared;
 
