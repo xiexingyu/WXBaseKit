@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "WXBaseKit"                #名称
-  s.version      = "0.0.7"                  #版本号
+  s.version      = "0.0.8"                  #版本号
   s.summary      = "ios基础开发库"               #简短介绍
   s.description  = <<-DESC 
                       ios开发库,基础类,通用组建,数据模型,分类
